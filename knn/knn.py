@@ -44,7 +44,7 @@ class KNNClassifier:
         """fit KNN Classifier"""
         assert X_train.shape[0] == y_train.shape[0], \
             'the size of X_train must equal to the size of y_train'
-        assert X_train.shape[1] == x.shape[0], \
+        assert self.k <= X_train.shape[0], \
             'the feature number of x must be equal to X_train'
         self._X_train = X_train
         self._y_train = y_train
